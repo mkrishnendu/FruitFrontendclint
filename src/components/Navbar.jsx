@@ -30,12 +30,13 @@ function Navbar() {
       <AppBar
         position="fixed"
         sx={{
-          background: 'linear-gradient(45deg, #000000 30%, #4f4f4f 90%)',
-          boxShadow: '0 3px 5px 2px rgba(33, 203, 243, .3)',
+          background: 'linear-gradient(135deg, #006400 0%, #32CD32 100%)', // Green gradient
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+          transition: 'background 0.3s ease',
         }}
       >
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', color: '#ffffff' }}>
             Fruit.ai
           </Typography>
           {isSmallScreen ? (
@@ -45,6 +46,7 @@ function Navbar() {
                 color="inherit"
                 aria-label="menu"
                 onClick={handleMenuOpen}
+                sx={{ marginRight: '16px' }}
               >
                 <MenuIcon />
               </IconButton>
@@ -52,24 +54,24 @@ function Navbar() {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleMenuClose}
-                PaperProps={{ style: { width: '200px' } }}
+                PaperProps={{ style: { width: '220px', backgroundColor: '#004d00' } }} // Dark green background for menu
               >
-                <MenuItem onClick={handleMenuClose} component={Link} to="/">Home</MenuItem>
-                <MenuItem onClick={handleMenuClose} component={Link} to="/chatbot">Chatbot</MenuItem>
-                <MenuItem onClick={handleMenuClose} component={Link} to="/translator">Translator</MenuItem>
-                <MenuItem onClick={handleMenuClose} component={Link} to="/faq">FAQ</MenuItem>
-                <MenuItem onClick={handleMenuClose} component={Link} to="/about">About</MenuItem>
-                <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                <MenuItem onClick={handleMenuClose} component={Link} to="/" sx={{ color: '#ffffff' }}>Home</MenuItem>
+                <MenuItem onClick={handleMenuClose} component={Link} to="/chatbot" sx={{ color: '#ffffff' }}>Chatbot</MenuItem>
+                <MenuItem onClick={handleMenuClose} component={Link} to="/translator" sx={{ color: '#ffffff' }}>Translator</MenuItem>
+                <MenuItem onClick={handleMenuClose} component={Link} to="/faq" sx={{ color: '#ffffff' }}>FAQ</MenuItem>
+                <MenuItem onClick={handleMenuClose} component={Link} to="/about" sx={{ color: '#ffffff' }}>About</MenuItem>
+                <MenuItem onClick={handleLogout} sx={{ color: '#ff5722' }}>Logout</MenuItem> {/* Optional color for Logout */}
               </Menu>
             </>
           ) : (
             <>
-              <Button color="inherit" component={Link} to="/">Home</Button>
-              <Button color="inherit" component={Link} to="/chatbot">Chatbot</Button>
-              <Button color="inherit" component={Link} to="/translator">Translator</Button>
-              <Button color="inherit" component={Link} to="/faq">FAQ</Button>
-              <Button color="inherit" component={Link} to="/about">About</Button>
-              <Button color="inherit" onClick={handleLogout}>Logout</Button>
+              <Button color="inherit" component={Link} to="/" sx={{ textTransform: 'uppercase', color: '#ffffff' }}>Home</Button>
+              <Button color="inherit" component={Link} to="/chatbot" sx={{ textTransform: 'uppercase', color: '#ffffff' }}>Chatbot</Button>
+              <Button color="inherit" component={Link} to="/translator" sx={{ textTransform: 'uppercase', color: '#ffffff' }}>Translator</Button>
+              <Button color="inherit" component={Link} to="/faq" sx={{ textTransform: 'uppercase', color: '#ffffff' }}>FAQ</Button>
+              <Button color="inherit" component={Link} to="/about" sx={{ textTransform: 'uppercase', color: '#ffffff' }}>About</Button>
+              <Button color="inherit" onClick={handleLogout} sx={{ textTransform: 'uppercase', color: '#ff5722' }}>Logout</Button> {/* Optional color for Logout */}
             </>
           )}
         </Toolbar>

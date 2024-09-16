@@ -109,11 +109,15 @@ const TranslatorPage = () => {
         <Button
           onClick={handleSwapLanguages}
           sx={{
-            background:"none",
-            color:"black"
+            background: 'none',
+            color: '#2c6b6f', // Green color
+            marginY: 2,
+            '&:hover': {
+              color: '#1d4d4f', // Darker green color on hover
+            },
           }}
         >
-          <ImportExportIcon/>
+          <ImportExportIcon />
         </Button>
         <FormControl fullWidth variant="outlined" sx={{ marginTop: 2 }}>
           <InputLabel>Target Language</InputLabel>
@@ -144,14 +148,15 @@ const TranslatorPage = () => {
           variant="contained"
           fullWidth
           sx={{
-            background: 'linear-gradient(45deg, #000000 30%, #4f4f4f 90%)',
+            background: 'linear-gradient(45deg, #4caf50 30%, #2e7d32 90%)', // Green gradient
             color: '#fff',
             marginTop: 2,
             '&:hover': {
-              backgroundColor: '#303f9f',
+              backgroundColor: '#388e3c', // Darker green for hover
             },
             borderRadius: '20px',
             padding: '8px 16px',
+            fontWeight: 'bold',
           }}
         >
           Translate

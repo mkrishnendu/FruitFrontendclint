@@ -80,21 +80,26 @@ const HomePage = () => {
                 {card.title}
               </Typography>
               <Button
-                component={Link}
-                to={card.link}
-                sx={{
-                  background: 'linear-gradient(45deg, #000000 30%, #4f4f4f 90%)',
-                  color: 'yellow',
-                  marginTop: 2,
-                  '&:hover': {
-                    backgroundColor: '#1e88e5',
-                  },
-                  borderRadius: '20px',
-                  padding: '8px 16px',
-                }}
-              >
-                Explore {card.title}
-              </Button>
+  component={Link}
+  to={card.link}
+  sx={{
+    background: 'linear-gradient(45deg, #4caf50 30%, #2e7d32 90%)', // Green gradient background
+    color: '#ffffff', // White text color
+    marginTop: 2,
+    '&:hover': {
+      background: 'linear-gradient(45deg, #388e3c 30%, #1b5e20 90%)', // Darker green gradient on hover
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)', // Shadow effect on hover
+    },
+    borderRadius: '30px', // Increased border radius for a more rounded look
+    padding: '12px 24px', // Increased padding for a more prominent button
+    fontWeight: 'bold', // Bold text for emphasis
+    textTransform: 'uppercase', // Uppercase text for uniformity
+    transition: 'background 0.3s ease, box-shadow 0.3s ease', // Smooth transition for hover effects
+  }}
+>
+  Explore {card.title}
+</Button>
+
             </CardContent>
           </Card>
         ))}
