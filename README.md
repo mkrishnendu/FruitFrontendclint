@@ -48,7 +48,7 @@ These are hardcoded in the login page.
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/SouvikDas2002/Fruit.ai-frontend.git
+    git clone https://github.com/https://github.com/mkrishnendu/Fruit.ai-frontend.git
     ```
 
 2. **Navigate to the frontend directory**:
@@ -116,9 +116,9 @@ These are hardcoded in the login page.
 
 ## Repositories
 
-- **Frontend**: [GitHub Repository](https://github.com/SouvikDas2002/Fruit.ai-frontend.git)
-- **Backend**: [GitHub Repository](https://github.com/SouvikDas2002/Fruit.ai-flask-API)
+- **Frontend**: [GitHub Repository]((https://github.com/mkrishnendu/fruitbackend))
+- **Backend**: [GitHub Repository](https://github.com/mkrishnendu/FruitFrontendclint))
 
 ## Contact
 
-For any questions or support, feel free to contact me at [dev.souvik2002@gmail.com](mailto:dev.souvik2002@gmail.com).
+
